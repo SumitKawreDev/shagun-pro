@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import logo from "../assets/logo/logo.png";
 
 /**
  * Clean SVG Social Icons (LinkedIn, Facebook, Instagram, YouTube)
@@ -85,57 +86,13 @@ const SOCIAL_LINKS = [
 /**
  * ShagunPro Brand Logo Component
  */
-const ShagunBrandLogo = ({ logoSrc }) => {
-  if (logoSrc) {
-    return (
-      <img
-        src={logoSrc}
-        alt="Shagun Pro"
-        className="h-12 sm:h-14 w-auto object-contain select-none"
-      />
-    );
-  }
-
-  return (
-    <div className="inline-flex items-center gap-3 select-none">
-      <div className="relative w-12 h-12 flex items-center justify-center shrink-0">
-        <svg
-          viewBox="0 0 64 64"
-          className="w-full h-full overflow-visible"
-          aria-hidden="true"
-        >
-          {[0, 72, 144, 216, 288].map((angle, idx) => (
-            <g key={idx} transform={`rotate(${angle} 32 32)`}>
-              <text
-                x="32"
-                y="13"
-                textAnchor="middle"
-                fill="#EC7029"
-                fontSize="13.5"
-                fontFamily="Georgia, 'Times New Roman', serif"
-                fontWeight="bold"
-              >
-                sp
-              </text>
-            </g>
-          ))}
-          <polygon
-            points="32,25 33.8,29.5 38.5,29.8 34.8,32.9 36,37.5 32,34.8 28,37.5 29.2,32.9 25.5,29.8 30.2,29.5"
-            fill="#E51C23"
-          />
-        </svg>
-      </div>
-
-      <span
-        className="text-[30px] sm:text-[34px] tracking-tight leading-none font-normal"
-        style={{ fontFamily: "Georgia, 'Times New Roman', serif" }}
-      >
-        <span className="text-[#E51C23]">Shagun</span>
-        <span className="text-[#EC7029]">Pro</span>
-      </span>
-    </div>
-  );
-};
+const ShagunBrandLogo = () => (
+  <img
+    src={logo}
+    alt="Shagun Pro"
+    className="h-12 w-auto select-none object-contain sm:h-14"
+  />
+);
 
 /**
  * Main Footer Component
